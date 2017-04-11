@@ -1,0 +1,20 @@
+﻿@model List<RoleRestriction.Models.Movie>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies List</h2>
+
+@if (Model.Count == 0)
+{
+    <h4>No movies to display</h4>
+}
+else
+{
+    foreach (var movie in Model)
+    {
+        <li>@movie.Name</li>
+    }
+}
+

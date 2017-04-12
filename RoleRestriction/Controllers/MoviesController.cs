@@ -19,6 +19,8 @@ namespace RoleRestriction.Controllers
         {
             _context.Dispose();
         }
+
+        [HttpGet]
         public ActionResult Index()
         {
             var movieslist = _context.Movies.ToList();
@@ -56,6 +58,7 @@ namespace RoleRestriction.Controllers
             return RedirectToAction("Index","Movies");
         }
 
+
         public ActionResult Details(int id)
         {
             var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
@@ -64,6 +67,17 @@ namespace RoleRestriction.Controllers
                 return Content("No data found");
             }
             return View("New",movie);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var movie = _context.Movies.Single(m => m.Id == id);
+            if(movie!=null)
+            {
+                _context.Movies.Remove(movie);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Index","Movies");
         }
     }
 }

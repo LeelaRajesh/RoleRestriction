@@ -29,5 +29,7 @@
         @Html.LabelFor(m => m.DateToBook)
         @Html.TextBoxFor(m => m.DateToBook, new { @class = "form-control" })
     </div>
+    
+    @Html.Hidden("Id",@Model.Id)
     <button type="submit" class="btn btn-primary">Save</button>
 }

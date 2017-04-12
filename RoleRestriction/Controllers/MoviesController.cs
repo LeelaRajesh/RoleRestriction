@@ -31,12 +31,39 @@ namespace RoleRestriction.Controllers
             return View();
         }
 
+        [HttpPost]
         public ActionResult Create(Movie newMovie)
         {
-            _context.Movies.Add(newMovie);
+            if (!ModelState.IsValid)
+            {
+                return Content("error");
+            }
+            if(newMovie.Id==0)
+            {
+                _context.Movies.Add(newMovie);
+            }
+            else
+            {
+                var movieIndBD = _context.Movies.Single(m => m.Id == newMovie.Id);
+                movieIndBD.Name = newMovie.Name;
+                movieIndBD.Genre = newMovie.Genre;
+                movieIndBD.DateToBook = newMovie.DateToBook;
+                movieIndBD.AvailableSeats = movieIndBD.AvailableSeats;
+                movieIndBD.Price = movieIndBD.Price;
+            }
             _context.SaveChanges();
 
             return RedirectToAction("Index","Movies");
+        }
+
+        public ActionResult Details(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
+            if (movie == null)
+            {
+                return Content("No data found");
+            }
+            return View("New",movie);
         }
     }
 }

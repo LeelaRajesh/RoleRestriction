@@ -14,7 +14,7 @@ else
 {
     foreach (var movie in Model)
     {
-        <li>@movie.Name</li>
+        <li><a href="/Movies/Details/@movie.Id">@movie.Name</a></li>
     }
 }
 

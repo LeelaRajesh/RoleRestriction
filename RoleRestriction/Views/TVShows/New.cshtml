@@ -1,0 +1,37 @@
+﻿@model RoleRestriction.Models.TVShow
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add new TV show here!</h2>
+
+@using (Html.BeginForm("Create", "TVShows")
+    )
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class="form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Genre)
+        @Html.TextBoxFor(m => m.Genre, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.NoOfSeasons)
+        @Html.TextBoxFor(m => m.NoOfSeasons, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Region)
+        @Html.TextBoxFor(m => m.Region, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.EpisodesPerSeason)
+        @Html.TextBoxFor(m => m.EpisodesPerSeason, new { @class = "form-control" })
+    </div>
+    if (Model != null)
+    {
+        @Html.Hidden("Id", @Model.Id)
+    }
+    <button class="btn btn-primary" type="submit">Save</button>
+}

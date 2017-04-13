@@ -1,0 +1,41 @@
+﻿@model List<RoleRestriction.Models.TVShow>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Index</h2>
+@if (Model.Count == 0)
+{
+    <h4><font color="red">No TV Shows to show yet!</font></h4>
+}
+else
+{
+    <table id="TVShows" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    TV Show
+                </th>
+                <th>
+                    Genre
+                </th>
+                <th>
+                    Delete
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var tvShow in Model)
+            {
+                <tr>
+                    <td width="500px"><a href="/Movies/Details/@tvShow.Id">@tvShow.Name</a></td>
+                    <td>@tvShow.Genre</td>
+                    <td><a href="/Movies/Delete/@tvShow.Id">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+

@@ -59,3 +59,5 @@ D:\study\RoleRestriction\RoleRestriction\obj\Debug\RoleRestriction.Migrations.Ad
 D:\study\RoleRestriction\RoleRestriction\obj\Debug\RoleRestriction.Migrations.AddingDbSetMovies.resources
 D:\study\RoleRestriction\RoleRestriction\obj\Debug\RoleRestriction.Migrations.DeletingLeadRoleFromMovie.resources
 D:\study\RoleRestriction\RoleRestriction\obj\Debug\RoleRestriction.Migrations.AddedTVShowsModel.resources
+D:\study\RoleRestriction\RoleRestriction\obj\Debug\RoleRestriction.Migrations.AddedEventModel.resources
+D:\study\RoleRestriction\RoleRestriction\obj\Debug\RoleRestriction.Migrations.AddedEventModel1.resources

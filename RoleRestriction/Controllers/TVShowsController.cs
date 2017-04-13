@@ -57,5 +57,13 @@ namespace RoleRestriction.Controllers
             var tvShow = _context.TVShows.SingleOrDefault(t => t.Id == id);
             return View("New",tvShow);
         }
+
+        public ActionResult Delete(int id)
+        {
+            var tvShow=_context.TVShows.Single(t=>t.Id==id);
+            _context.TVShows.Remove(tvShow);
+            _context.SaveChanges();
+            return RedirectToAction("Index","TVShows");
+        }
     }
 }

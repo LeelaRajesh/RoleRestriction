@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Index</h2>
+<h2>TVShows List</h2>
 @if (Model.Count == 0)
 {
     <h4><font color="red">No TV Shows to show yet!</font></h4>
@@ -31,7 +31,7 @@ else
                 <tr>
                     <td><a href="/TVShows/Details/@tvShow.Id">@tvShow.Name</a></td>
                     <td>@tvShow.Genre</td>
-                    <td><a href="/Movies/Delete/@tvShow.Id">Delete</a></td>
+                    <td><a href="/TVShows/Delete/@tvShow.Id">Delete</a></td>
                 </tr>
             }
         </tbody>

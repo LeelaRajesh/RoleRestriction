@@ -12,13 +12,21 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                         <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">
-                            Movies
-                            
+                            Movies                            
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/Movies">List</a></li>
                             <li><a href="/Movies/New">Add Movie</a></li>
                         </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">
+                        TV Shows
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/TVShows">List</a></li>
+                        <li><a href="/TVShows/New">Add TV Show</a></li>
+                    </ul>
                 </li>
                 <li>@Html.ActionLink("About", "About", "Home")</li>
                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>

@@ -186,8 +186,17 @@
     <Compile Include="Migrations\201704130214385_AddedTVShowsModel.Designer.cs">
       <DependentUpon>201704130214385_AddedTVShowsModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704131842173_AddedEventModel.cs" />
+    <Compile Include="Migrations\201704131842173_AddedEventModel.Designer.cs">
+      <DependentUpon>201704131842173_AddedEventModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704131848052_AddedEventModel1.cs" />
+    <Compile Include="Migrations\201704131848052_AddedEventModel1.Designer.cs">
+      <DependentUpon>201704131848052_AddedEventModel1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Event.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -283,6 +292,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704130214385_AddedTVShowsModel.resx">
       <DependentUpon>201704130214385_AddedTVShowsModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704131842173_AddedEventModel.resx">
+      <DependentUpon>201704131842173_AddedEventModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704131848052_AddedEventModel1.resx">
+      <DependentUpon>201704131848052_AddedEventModel1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

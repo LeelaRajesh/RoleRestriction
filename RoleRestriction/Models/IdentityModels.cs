@@ -22,6 +22,7 @@ namespace RoleRestriction.Models
     {
         public DbSet<TVShow> TVShows { get; set; }
         public DbSet<Movie> Movies { get; set; }
+        public DbSet<Event> Events { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

@@ -20,6 +20,7 @@ namespace RoleRestriction.Controllers
             _context.Dispose();
         }
 
+        [HttpGet]
         public ActionResult Index()
         {
             var TVShows = _context.TVShows.ToList();
@@ -34,9 +35,27 @@ namespace RoleRestriction.Controllers
         [HttpPost]
         public ActionResult Create(TVShow tvShow)
         {
-            _context.TVShows.Add(tvShow);
+            if(tvShow.Id==0)
+            {
+                _context.TVShows.Add(tvShow);
+            }
+            else
+            {
+                var tvShowInDb = _context.TVShows.Single(t => t.Id == tvShow.Id);
+                tvShowInDb.Name = tvShow.Name;
+                tvShowInDb.Genre = tvShow.Genre;
+                tvShowInDb.NoOfSeasons = tvShow.NoOfSeasons;
+                tvShowInDb.EpisodesPerSeason = tvShow.EpisodesPerSeason;
+                tvShowInDb.Region = tvShow.Region;
+            }
             _context.SaveChanges();
             return RedirectToAction("Index","TVShows");
+        }
+
+        public ActionResult Details(int id)
+        {
+            var tvShow = _context.TVShows.SingleOrDefault(t => t.Id == id);
+            return View("New",tvShow);
         }
     }
 }

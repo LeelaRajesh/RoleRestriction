@@ -1,0 +1,13 @@
+﻿@model List<RoleRestriction.Models.Event>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Events List</h2>
+
+@if (@Model.Count == 0)
+{
+    <h4>No events to show</h4>
+}
+

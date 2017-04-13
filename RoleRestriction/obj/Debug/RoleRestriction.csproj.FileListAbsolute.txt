@@ -58,3 +58,4 @@ D:\study\RoleRestriction\RoleRestriction\obj\Debug\RoleRestriction.csproj.Genera
 D:\study\RoleRestriction\RoleRestriction\obj\Debug\RoleRestriction.Migrations.AddingMovieClass.resources
 D:\study\RoleRestriction\RoleRestriction\obj\Debug\RoleRestriction.Migrations.AddingDbSetMovies.resources
 D:\study\RoleRestriction\RoleRestriction\obj\Debug\RoleRestriction.Migrations.DeletingLeadRoleFromMovie.resources
+D:\study\RoleRestriction\RoleRestriction\obj\Debug\RoleRestriction.Migrations.AddedTVShowsModel.resources

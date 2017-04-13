@@ -1,0 +1,33 @@
+﻿@model RoleRestriction.Models.Event
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Event</h2>
+
+@using (Html.BeginForm("Create", "Events"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.EventType)
+        @Html.TextBoxFor(m => m.EventType, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Starring)
+        @Html.TextBoxFor(m => m.Starring, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Venue)
+        @Html.TextBoxFor(m => m.Venue, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.NoOfTickets)
+        @Html.TextBoxFor(m => m.NoOfTickets, new { @class = "form-control" })
+    </div>
+    if (Model != null)
+    {
+        Html.Hidden("Id", Model.Id);
+    }
+    <button class="btn btn-primary">Save</button>
+}
+

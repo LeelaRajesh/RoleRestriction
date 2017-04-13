@@ -10,4 +10,32 @@
 {
     <h4>No events to show</h4>
 }
+else
+{
+    <table id="Events" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    Event Type
+                </th>
+                <th>
+                    Starring
+                </th>
+                <th>
+                    Delete
+                </th>
+            </tr>
+        </thead>
+        <tbody>
 
+            @foreach (var events in Model)
+            {
+                <tr>
+                    <td><a href="/Movies/Details/@events.Id">@events.EventType</a></td>
+                    <td>@events.Starring</td>
+                    <td><a href="/Movies/Delete/@events.Id">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

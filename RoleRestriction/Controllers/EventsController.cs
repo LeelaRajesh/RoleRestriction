@@ -24,5 +24,17 @@ namespace RoleRestriction.Controllers
             var events = _context.Events.ToList();
             return View(events);
         }
+
+        public ActionResult New()
+        {
+            return View();
+        }
+
+        public ActionResult Create(Event viewEvent)
+        {
+            _context.Events.Add(viewEvent);
+            _context.SaveChanges();
+            return RedirectToAction("Index","Events");
+        }
     }
 }

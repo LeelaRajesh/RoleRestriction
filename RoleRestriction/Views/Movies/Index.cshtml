@@ -31,7 +31,7 @@ else
                 @foreach (var movie in Model)
                 {
                     <tr>
-                        <td width="500px"><a href="/Movies/Details/@movie.Id">@movie.Name</a></td>
+                        <td><a href="/Movies/Details/@movie.Id">@movie.Name</a></td>
                         <td>@movie.Genre</td>
                         <td><a href="/Movies/Delete/@movie.Id">Delete</a></td>
                     </tr>

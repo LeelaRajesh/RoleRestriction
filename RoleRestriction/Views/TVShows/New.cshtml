@@ -4,11 +4,16 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>New TVShow</h2>
+@if (Model == null)
+{
+    <h2>New TVShow</h2>
+}
+
 
 @using (Html.BeginForm("Create", "TVShows")
     )
 {
+    <br />
     <div class="form-group">
         @Html.LabelFor(m => m.Name)
         @Html.TextBoxFor(m => m.Name, new { @class="form-control"})

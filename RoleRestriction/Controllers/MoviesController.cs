@@ -50,8 +50,8 @@ namespace RoleRestriction.Controllers
                 movieIndBD.Name = newMovie.Name;
                 movieIndBD.Genre = newMovie.Genre;
                 movieIndBD.DateToBook = newMovie.DateToBook;
-                movieIndBD.AvailableSeats = movieIndBD.AvailableSeats;
-                movieIndBD.Price = movieIndBD.Price;
+                movieIndBD.AvailableSeats = newMovie.AvailableSeats;
+                movieIndBD.Price = newMovie.Price;
             }
             _context.SaveChanges();
 

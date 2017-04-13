@@ -31,9 +31,9 @@ else
             @foreach (var events in Model)
             {
                 <tr>
-                    <td><a href="/Movies/Details/@events.Id">@events.EventType</a></td>
+                    <td><a href="/Events/Details/@events.Id">@events.EventType</a></td>
                     <td>@events.Starring</td>
-                    <td><a href="/Movies/Delete/@events.Id">Delete</a></td>
+                    <td><a href="/Events/Delete/@events.Id">Delete</a></td>
                 </tr>
             }
         </tbody>

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using RoleRestriction.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace RoleRestriction.Controllers
 {
+    [Authorize(Roles = "CanEditTVShows, CanChangeRoles")]
     public class TVShowsController : Controller
     {
         // GET: TVShows

@@ -4,9 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using RoleRestriction.Models;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace RoleRestriction.Controllers
 {
+    [Authorize(Roles = "CanEditEvents, CanChangeRoles")]
     public class EventsController : Controller
     {
         // GET: Events

@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RoleRestriction.Controllers
 {
-    [Authorize(Roles = "CanEditTVShows, CanChangeRoles")]
+    [CustomAuthorization(Roles = "CanEditTVShows, Admin")]
     public class TVShowsController : Controller
     {
         // GET: TVShows

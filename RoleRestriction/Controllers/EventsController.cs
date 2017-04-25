@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RoleRestriction.Controllers
 {
-    [Authorize(Roles = "CanEditEvents, CanChangeRoles")]
+    [CustomAuthorization(Roles = "CanEditEvents, Admin")]
     public class EventsController : Controller
     {
         // GET: Events
